@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/icons8-javascript.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <title>JS</title>
+</head>
+<body>
+  <div class="scroll-top color-white" id="scroll-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a class="logo-a color-white" href="index.html">
+            <img src="img/logo.png" alt="">
+            Christmas
+          </a>
+      </div>
+      <nav class="nav-links">
+        <ul class="links d-none d-lg-flex" id="links">
+          <div class="img-light d-lg-none">
+            <img src="img/nav-light.png" alt="">
+          </div>
+          <div class="close-icon d-lg-none color-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+              <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+          </div>
+          <li>
+            <a class="active link color-white" href="#">Home</a>
+          </li>
+          <li>
+            <a class="link color-white" href="#">Celebrate</a>
+          </li>
+          <li>
+            <a class="link color-white" href="#">Gifts</a>
+          </li>
+          <li>
+            <a class="link color-white" href="#">New</a>
+          </li>
+          <li>
+            <a class="link color-white" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="mode-site color-white">
+          <div class="sun" id="sun">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </svg>
+          </div>
+          <div class="dark" id="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-moon-fill" viewBox="0 0 16 16">
+            <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"/>
+            <path d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.46 5.46 0 0 1 1.055.209A3.603 3.603 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.576 3.576 0 0 1-2.241.634c.162.317.295.652.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="menue-icon d-lg-none color-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+          </svg>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="home">
+    <div class="container">
+      <div class="home-content">
+        <div class="row gy-3 justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="image">
+              <img class="img-fluid" src="img/home.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="home-data">
+              <div class="title color-white">Merry Christmas and Happy New Year!</div>
+              <div class="desc">Christmas and a new year is about to begin, all good wishes and successes.</div>
+              <div class="home-btn">
+                <button>Get Started</button>
+              </d>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Christmas">
+    <div class="title main-title color-white">Start Giving This <br> Christmas</div>
+    <div class="container">
+      <div class="boxes  color-white">
+        <div class="box">
+          <div class="image">
+            <img src="img/giving3.png" alt="">
+          </div>
+          <div class="title-box">Surprise gifts</div>
+          <div class="box-desc">They are the best <br> gifts there is.</div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="img/giving1.png" alt="">
+          </div>
+          <div class="title-box">Ornaments</div>
+          <div class="box-desc">Give a moment to <br> decorate.</div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="img/giving2.png" alt="">
+          </div>
+          <div class="title-box">Lots of love</div>
+          <div class="box-desc">Give away feelings <br> that last forever.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="javascript/bootstrap.js"></script>
+  <script src="javascript/javascript.js"></script>
+</body>
+</html>
