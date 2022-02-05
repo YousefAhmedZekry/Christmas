@@ -11,7 +11,7 @@
 :root {
     --main-Color: #dc3845;
     --second-Color: #212529;
-    --main-Padding: 10px;
+    --main-Padding: 90px;
     --padding-y: 50px 0;
     --main-Border: 1px solid black;
     --main-Px: 4px;
@@ -56,38 +56,8 @@ body {
     position: relative;
     /* min-height: 2000px; */
     /* font-family: 'Lato', sans-serif; */
-    min-height: 2000px;
+    min-height: 4000px;
     transition: var(--main-Transition);
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-}
-
-.container {
-    margin: 0 auto;
 }
 
 div, h1, h2, h3, h4, h5, h6, p, span {
@@ -191,9 +161,12 @@ button {
     left: 0;
     top: 0;
     padding: 24px 0;
-    box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
     z-index: 100;
     background-color: #fff;
+}
+
+.shadow-header{
+    box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
 }
 
 .header .nav-content {
@@ -299,6 +272,7 @@ button {
 /* XXXXX */
 
 .home {
+    padding: var(--main-Padding);
     padding-top: 140px;
 }
 
@@ -390,7 +364,7 @@ button {
 }
 
 .Christmas {
-    padding: 100px 0;
+    padding: padding: var(--main-Padding);;
 }
 
 @media (min-width: 1200px) {
@@ -409,6 +383,10 @@ button {
     margin: 0 auto;
 }
 
+.Christmas .boxes .box .image {
+    transition: var(--main-Transition);
+}
+
 .Christmas .boxes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -417,6 +395,10 @@ button {
 
 .Christmas .boxes .box {
     text-align: center;
+}
+
+.Christmas .boxes .box:hover .image {
+    transform: translateY(-10px) scale(1.1);
 }
 
 .Christmas .boxes .box .title-box {
@@ -428,4 +410,208 @@ button {
 .Christmas .boxes .box .box-desc {
     color: #777;
     text-transform: capitalize;
+}
+
+.celebrate {
+    padding: var(--main-Padding);
+}
+
+@media (min-width: 1200px) {
+    .celebrate .container {
+        width: 1000px;
+    }
+}
+
+.celebrate .celebrate-data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.celebrate .title {
+    font-weight: bold;
+}
+
+
+.celebrate .title-data {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.celebrate .desc {
+    font-weight: 400;
+    color: #777;
+    font-size: 18px;
+}
+
+.celebrate-btn button {
+    padding: 12px 40px;
+    background-color: var(--main-Color);
+    font-weight: bold;
+    color: #FFF;
+    border-radius: var(--main-Px);
+    transition: var(--main-Transition);
+    transition: var(--main-Transition);
+}
+
+@media (max-width: 768px) {
+    .celebrate-btn button {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+}
+
+.celebrate-btn button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .celebrate .image img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .celebrate .celebrate-data {
+        text-align: center;
+    }
+}
+
+
+
+
+.gifts {
+    padding: var(--main-Padding);
+}
+
+.gifts .title {
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .gifts .container {
+        width: 800px;
+    }
+}
+
+.gifts .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.gifts .card-box {
+    box-shadow: 0 4px 16px #47383933;
+    padding: 30px 24px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.gifts .card-box::before {
+    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.gifts .cards .pic {
+    margin-bottom: 15px;
+}
+
+.gifts .cards img {
+    width: 120px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.gifts .cards .price {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.gifts .cards .desc-card {
+    font-weight: 500;
+    color: #777;
+}
+
+.new {
+    padding: var(--main-Padding);
+}
+
+@media (min-width: 1200px) {
+    .new .container {
+        width: 1000px;
+    }
+}
+
+.new .new-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap: 80px;
+    row-gap: 40px;
+}
+
+.new .box {
+    padding: 40px;
+    padding-top: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(78, 57, 58, 0.212);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.new .box::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    background-color: var(--main-Color);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new .pic {
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.new .pic::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--main-Color);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.new .pic img {
+    max-width: 100%;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.new .new-container .price {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: var(--main-Px);
+}
+
+.new .desc {
+    font-weight: 500;
+    color: #777;
 }

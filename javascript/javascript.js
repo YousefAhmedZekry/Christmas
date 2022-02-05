@@ -79,3 +79,11 @@ scrollBtn.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+
+window.onscroll = function () {
+    if (window.scrollY > 1) {
+        document.querySelector(".header").classList.add("shadow-header");
+    } else {
+        document.querySelector(".header").classList.remove("shadow-header");
+    }
+};
