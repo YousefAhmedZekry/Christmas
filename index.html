@@ -8,17 +8,20 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/icons8-javascript.svg">
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <title>JS</title>
 </head>
 <body>
+  <!-- Scroll To Top -->
   <div class="scroll-top color-white" id="scroll-top">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
     </svg>
   </div>
+
+  <!-- Start  -->
   <header class="header">
     <div class="container">
       <div class="nav-content">
@@ -40,19 +43,19 @@
             </svg>
           </div>
           <li>
-            <a class="active link color-white" href="#">Home</a>
+            <a class="active link color-white" id="home" href="home">Home</a>
           </li>
           <li>
-            <a class="link color-white" href="#">Celebrate</a>
+            <a class="link color-white" id="celebrate" href="#">Celebrate</a>
           </li>
           <li>
-            <a class="link color-white" href="#">Gifts</a>
+            <a class="link color-white" id="gifts" href="#">Gifts</a>
           </li>
           <li>
-            <a class="link color-white" href="#">New</a>
+            <a class="link color-white" id="new" href="#">New</a>
           </li>
           <li>
-            <a class="link color-white" href="#">Contact</a>
+            <a class="link color-white" id="contact" href="#">Contact</a>
           </li>
         </ul>
         <div class="mode-site color-white">
@@ -76,8 +79,8 @@
       </nav>
     </div>
   </header>
-
-  <section class="home">
+  <!-- Start Home -->
+  <section id="home" class="home offsetTop">
     <div class="container">
       <div class="home-content">
         <div class="row gy-3 justify-content-center align-items-center">
@@ -100,6 +103,7 @@
     </div>
   </section>
 
+  <!-- Start Christmas -->
   <section class="Christmas">
     <div class="title main-title color-white">Start Giving This <br> Christmas</div>
     <div class="container">
@@ -129,7 +133,8 @@
     </div>
   </section>
 
-  <section class="celebrate">
+  <!-- Start celebrate -->
+  <section class="celebrate offsetTop">
     <div class="main-title title color-white">Celebrate</div>
     <div class="container">
       <div class="home-content">
@@ -154,7 +159,8 @@
     </div>
   </section>
 
-  <section class="gifts">
+  <!-- Start Gifts -->
+  <section class="gifts offsetTop">
     <div class="main-title title color-white">Share A Gift</div>
     <div class="container">
       <div class="cards  color-white">
@@ -204,7 +210,8 @@
     </div>
   </section>
 
-  <div class="new">
+  <!-- Start New -->
+  <div class="new offsetTop">
     <div class="main-title fw-bold  color-white">New Gifts</div>
     <div class="container">
       <div class="new-container">
@@ -232,6 +239,73 @@
       </div>
     </div>
   </div>
+
+  <!-- Start Messege -->
+  <section class="messege">
+    <div class="container">
+      <div class="content">
+        <div class="row gy-4 align-items-center">
+          <div class="col-md-6">
+            <div class="messege-data">
+              <div class="title">Send Good <br> Wishes!</div>
+              <input type="text" class="theinput w-100" placeholder="Type Your Messege">
+              <div>
+                <button class="msg">Send Message</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="image">
+              <img src="img/message.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Contact -->
+  <footer class="contact offsetTop">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3 col-12">
+          <div class="title-ft color-white title-logo">
+            <img src="img/logo.png" alt="">
+            <h3>Christmas</h3>
+          </div>
+          <div class="desc">This Christmas give <br> a lot of love</div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="title-ft color-white">Our Services</div>
+          <u class="links-ft">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Discounts</a></li>
+            <li><a href="#">Shipping Mode</a></li>
+          </u>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="title-ft color-white">Support</div>
+          <u class="links-ft">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support center</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </u>
+          </ul>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="title-ft color-white">Available On</div>
+          <u class="links-ft l-image">
+            <li><a href="#"><img src="img/aviable1.png" alt=""></a></li>
+            <li><a href="#"><img src="img/aviable2.png" alt=""></a></li>
+          </u>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="f-text fw-bold text-center pb-4">© Bedimcode. All rigths reserved</div>
+
+  <!-- By Yousef Ahmed -->
   
   <!-- <script src="javascript/bootstrap.js"></script> -->
   <script src="javascript/javascript.js"></script>
