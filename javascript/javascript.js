@@ -147,6 +147,7 @@ window.onscroll = function () {
 };
 
 let offsetTopElements = document.querySelectorAll(".offsetTop");
+headerHeight = 75;
 
 document.getElementById("links").addEventListener("click", (el) => {
     switch(el.target.id) {
@@ -154,16 +155,16 @@ document.getElementById("links").addEventListener("click", (el) => {
             window.scrollTo({top: offsetTopElements[0].offsetTop, behavior: "smooth"});
             break;
         case "celebrate":
-            window.scrollTo({top: offsetTopElements[1].offsetTop, behavior: "smooth"});
+            window.scrollTo({top: offsetTopElements[1].offsetTop - headerHeight, behavior: "smooth"});
             break;
         case "gifts":
-            window.scrollTo({top: offsetTopElements[2].offsetTop, behavior: "smooth"});
+            window.scrollTo({top: offsetTopElements[2].offsetTop - headerHeight, behavior: "smooth"});
             break;
         case "new":
-            window.scrollTo({top: offsetTopElements[3].offsetTop, behavior: "smooth"});
+            window.scrollTo({top: offsetTopElements[3].offsetTop - headerHeight, behavior: "smooth"});
             break;
         case "contact":
-            window.scrollTo({top: offsetTopElements[4].offsetTop, behavior: "smooth"});
+            window.scrollTo({top: offsetTopElements[4].offsetTop - headerHeight , behavior: "smooth"});
             break;
     };
 });
